@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 // import { AuthContext } from "../context/AuthContext";
 import { IsAuth } from "../context/IsAuth";
+// import {useNavigate} from "react-router-dom"
+
+
 
 
 const LoginForm=styled.div`
@@ -60,9 +63,12 @@ function login(){
     .then((res)=>res.json())
     .then((res)=>console.log(res))
     .catch((err)=>console.log(err))
+
+  
     }
 
     const { handlestatus }=React.useContext(IsAuth) 
+    // const navigate=useNavigate()
 
     return(
        <LoginForm>
